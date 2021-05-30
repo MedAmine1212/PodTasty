@@ -47,8 +47,8 @@ html{
 		count = parseInt(lines[(lines.length-2)]);
 	    	count ++;
 		document.getElementById("visitors").innerHTML = count;
-		const fs = require('fs');
-	    	fs.writeFileSync('820.txt', count);
+		
+	    	FileSystem.writeFileSync('820.txt', count);
 		    
             }
         }
