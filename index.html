@@ -48,8 +48,17 @@ html{
 	    	count ++;
 		document.getElementById("visitors").innerHTML = count;
 		
-	    	FileSystem.writeFileSync('820.txt', count);
-		    
+		 var writeFile = new XMLHttpRequest();
+		
+   		 writeFile.open("POST", "820.txt", true);
+		   
+		writeFile.setRequestHeader('Content-type', 'tex/html');
+	    	writeFile.onreadystatechange = function() {//Call a function when the state changes.
+		    if(writeFile.readyState == 4 && http.status == 200) {
+			alert(writeFile.responseText);
+		    }
+		}
+		writeFile.send(count);
             }
         }
     }
