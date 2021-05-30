@@ -29,14 +29,18 @@ html{
 <div>
 	<script>
 		 var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", "text.txt", false);
+    rawFile.open("GET", "820.txt", false);
     rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
-                console.log(rawFile.responseText);
+		    //visitors = parseInt(rawFile.responseText);
+		    //visitors++;
+		    console.log(rawFile.responseText);
+		    //document.getElementById("visitors").innerHTML = visitors;
+		    
             }
         }
     }
