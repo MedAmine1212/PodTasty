@@ -38,7 +38,11 @@ html{
             {
 		    //visitors = parseInt(rawFile.responseText);
 		    //visitors++;
-		    console.log(rawFile.responseText);
+		    rawFile.responseText;
+			lines = text.split("\n"); 
+			for(i = 0; i < lines.length; i++){ 
+			    console.log(lines[i]); 
+			}
 		    //document.getElementById("visitors").innerHTML = visitors;
 		    
             }
